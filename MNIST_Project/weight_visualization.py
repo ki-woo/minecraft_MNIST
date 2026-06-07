@@ -2,7 +2,7 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 
-weights = torch.load("best_model.pth")
+weights = torch.load("reform_model.pth")
 
 def input():
     w = weights["fc1.weight"].numpy()
@@ -43,8 +43,8 @@ def neurons():
 # ===================================
 
 def histo():
-    w = weights["fc2.weight"].numpy().flatten()
-    w *= 5
+    w = weights["fc1.weight"][0].numpy().flatten()
+    # w *= 5
 
     # w = np.round(w).astype(int)
 
@@ -54,6 +54,23 @@ def histo():
     plt.xlabel("Weight")
     plt.ylabel("Count")
     plt.title("fc2.weight Distribution")
+
+    plt.show()
+
+# ===================================
+
+def histo2():
+    w = weights["fc1.bias"].numpy().flatten()
+    # w *= 5
+
+    # w = np.round(w).astype(int)
+
+
+    plt.hist(w, bins=50)
+
+    plt.xlabel("bias")
+    plt.ylabel("Count")
+    plt.title("fc1.bias Distribution")
 
     plt.show()
 
