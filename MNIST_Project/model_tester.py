@@ -6,6 +6,14 @@ from torchvision import transforms
 
 import matplotlib.pyplot as plt
 
+def bin_list(x):
+    # m = [7, 4, 4, 5, 5, 3, 5, 7, 6, 6]
+    arr = []
+    for i in range(10):
+        arr.append(format(int(x[i]) & 0xFFFF, '016b'))
+    return arr
+
+
 # =====================================
 # 데이터 전처리
 # =====================================
@@ -57,14 +65,24 @@ class MLP(nn.Module):
         print(x[0].tolist())
         x = self.fc2(x)
         print(x[0].tolist())
+        print(bin_list(x[0].tolist()))
 
         return x
 
 
 model = MLP()
 
+
+weights = torch.load(
+    "reform_model.pth"
+)
+
+for i in range(10):
+    weights["fc2.bias"][i] = 0
+
+
 model.load_state_dict(
-    torch.load("reform_model.pth")
+    weights
 )
 
 # =====================================

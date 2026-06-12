@@ -28,4 +28,4 @@ def generate_schem():
 
 # generate_schem()
 
-# print(weights["fc1.bias"][0].tolist())
+# print(weights["fc2.bias"].tolist())
