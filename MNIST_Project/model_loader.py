@@ -67,7 +67,7 @@ class MLP(nn.Module):
 model = MLP()
 
 model.load_state_dict(
-    torch.load("reform_model.pth")
+    torch.load("MNIST_Project/reform_model.pth")
 )
 
 # =====================================
