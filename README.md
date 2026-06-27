@@ -6,7 +6,7 @@ Date : **May04-Jun14 2026** (42days)
 
 ## 정보
 
-![img2](image\img2.png)
+![img2](Image\img2.png)
 
 **Minecraft Version** : 26.1.2
 
@@ -84,7 +84,7 @@ Date : **May04-Jun14 2026** (42days)
 
 ### 구조
 
-![img1](image\img1.png)
+![img1](Image\img1.png)
 
 - **Input**
     - **Input Pad** (Gray)
@@ -115,7 +115,7 @@ Date : **May04-Jun14 2026** (42days)
 
 ### 파라미터 이산화
 
-![fc1](image\fc1.png) ![fc2](image\fc2.png)
+![fc1](Image\fc1.png) ![fc2](Image\fc2.png)
 
 - 파이토치로 만든 모델의 파라미터 종류를 16가지 이하의 값으로 이산화 했을 때 정확도가 90%가 넘었습니다.
 
@@ -129,11 +129,11 @@ Date : **May04-Jun14 2026** (42days)
 - Accumulator의 정확한 구동법을 제대로 이해하지 못해 제작 과정에 어려움이 있었습니다.
 - Accumulator는 정확히 2tick 간격의 입력이 들어와야 제대로 연산이 되는데 이를 잘 알지 못해 값에 오차가 생기는 문제가 있었습니다.
 
-![img3](image\img3.png)
+![img3](Image\img3.png)
 
 - 2tick 간격으로 1을 세 번 입력 했을 때 결과값이 3(11)으로 제대로 나옵니다.
 
-![img4](image\img4.png)
+![img4](Image\img4.png)
 
 - 반면 3tick 간격으로 1을 세번 입력했을 때 4(100)로 값에 오차가 생기는 것을 볼 수 있습니다.
 
